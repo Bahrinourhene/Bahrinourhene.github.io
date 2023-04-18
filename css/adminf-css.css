@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap');
+:root{
+    --lg-font: 'Kaisei Tokumin', serif;
+    --sm-font: 'Poppins', sans-serif;    
+    --lcolor:rgb(155 73 34);
+    --color1:#27150c;
+    --color2:#cc9d7b;
+    --white1:#fffcf4;
+    --pink1:#cfb6a2;
+    --color4:#815034;
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    font-family: 'system-ui', sans-serif;
+    margin: 0%;
+    padding: 0%;
+    outline: none;
+}
+
+/*start navbar*/
+.navbar{
+    box-shadow: 0 3px 9px 3px rgba(0,0,0,0.1);
+}
+.navbar-brand img {
+    width: 3rem;
+    border-radius: 2px;
+ }
+ .navbar-brand span {
+    text-transform: uppercase!important;
+    color: var(--lcolor);
+    /*font-family: var(--lg-font);*/
+    letter-spacing: 1px;
+
+ }
+.navbar .bg-primary{
+    background-color: var(--lcolor)!important;
+ }
+ .nav-link{
+    color: var(--color1)!important;
+ }
+ .nav-link:hover{
+    color: var(--color2)!important;
+ }
+ .nav-item{
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+ }
+ /*end nav*/
+section{
+    display: flex;
+    justify-self: center;
+    align-items: center; 
+    margin: 160px 0px;
+}
+section .sec-container{
+    display: grid;
+    padding-left: 25rem;
+    padding-top: 1rem;
+}
+.form-wrapper{
+    display: flex;
+    justify-self: flex-end;
+    align-items: center;
+    flex: auto;  
+}
+.card{
+    width: 360px;
+    padding: 20px;
+background-color:var(--white1);
+    border-radius: 5px;
+    box-shadow: 0 3px 9px 3px rgba(0,0,0,0.1);
+
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 30px 20px 0;
+    font-size: 1.1rem;
+    color: var(--color4);
+    box-shadow:  0 2px 11px 1px var(--color2);
+    border-radius: 50px !important;
+
+}
+.card-header .form-header{
+    flex: 50%;
+    text-align: center;
+    padding: 10px 0;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    user-select: none;
+    cursor: pointer;
+}
+.card-header .form-header.active{
+    box-shadow: inset 1px 1px 2px rgb(155 73 34 55%),inset -1px 1px 2px rgb(155 73 34 55%),inset -1px -1px 2px rgb(155 73 34 55%),
+    inset 1px -1px 2px hsla(45, 37%, 44%, 0.437);
+    border-color:var(--color2);
+    transition: border-color 0.3s , box-shadow 0.3s ;
+}
+.card-body{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 40px 0;
+    text-align: center;
+
+}
+form{
+    flex:0 0 100% ;
+
+}
+.toggleForm{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s , visibility 0.3s;
+}
+.form-controll{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--color2);
+    background: none;
+    outline:none;
+    padding: 10px 5px;
+    margin-bottom: 20px;
+    color:var(--color4);
+}
+.form-controll::placeholder{
+   color:var(--color2); 
+}
+.Formbutton{
+    border: solid 1px transparent;
+    padding: 0.9rem 3rem;
+    background-color: var(--color4);
+    color: var(--white1);
+    border-radius: 50px;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    transition: transforme .3s , box-shadow .3s;
+
+}
+.Formbutton:hover{
+    box-shadow: 3px 5px 115px var(--color4);
+    transform: translateY(-5px);
+}
+
+/* to remove the border bottom in the big screen*/
+@media(min-width:992px){
+    .nav-item{
+        border-bottom: none;
+    }
+ }
+ /* newsletter */
+#newsletter{
+    background-color: rgba(179, 179, 179, 0.05);
+}
+#newsletter p{
+    max-width: 600px;
+}
+#newsletter .input-group{
+    max-width: 500px;
+}
+#newsletter .form-control{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+#newsletter .btn{
+    background-color: var(--color1);
+    color: #fff;
+    border-color: var(--color1);
+}
+#newsletter .btn:hover{
+    background-color:var(--color2);
+    border-color: var();
+}
+/* footer */
+.footer{
+    background-color:#d1ab7c;
+}
+footer .brand{
+    font-family: var(--lg-font);
+    letter-spacing: 2px;
+}
+footer a{
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+footer a:hover{
+    color: var(--color4)!important;
+}
+
+
